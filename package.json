@@ -1,5 +1,5 @@
 {
-  "name": "@tagspaces/text-editor",
+  "name": "@tagspaces/text-editor-component",
   "version": "1.0.0",
   "description": "A TagSpaces extension allowing editing of text based documents.",
   "homepage": "https://www.tagspaces.org",
