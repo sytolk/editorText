@@ -26,3 +26,4 @@ libs/**/demos/
 .idea/
 *.iml
 dist/
+.cache/
