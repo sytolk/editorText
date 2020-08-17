@@ -9,7 +9,7 @@
     "url": "https://www.tagspaces.org"
   },
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
     "prebuild-dev": "shx rm -rf dist/*",
