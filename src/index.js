@@ -8,4 +8,4 @@ import ReactEditor from "./ReactEditor";
 if (process.env.NODE_ENV !== "production") module.hot.accept();
 
 // Define imported web component
-define("text-editor", ReactEditor);
+define("text-editor-component", ReactEditor);
