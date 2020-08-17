@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Simple React component
-import CodemirrorEditor from './CodemirrorEditor';
+import CodemirrorEditor from './CodemirrorEditor.js';
 // import Counter from "./Counter";
 
 // This function creates update callback, which uses react-dom
