@@ -11,11 +11,11 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "parcel start.html --open",
+    "start": "parcel index.html --open",
     "prebuild-dev": "shx rm -rf dist/*",
     "build-dev": "parcel build ./src/index.js --no-minify --public-url ./",
     "build": "parcel build ./src/index.js --public-url ./",
-    "push-ts-component": "push-dir --dir=dist --branch=ts-component --cleanup --verbose"
+    "push-ts-component": "push-dir --dir=dist --branch=ts-component --cleanup --verbose --allow-unclean"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.4",
