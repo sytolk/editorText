@@ -2,7 +2,7 @@
 import "@webcomponents/webcomponentsjs/webcomponents-bundle.js";
 
 import { define } from "hybrids";
-import ReactEditor from "./ReactEditor";
+import ReactEditor from "./src/ReactEditor";
 
 // Enable HMR for development
 if (process.env.NODE_ENV !== "production") module.hot.accept();
