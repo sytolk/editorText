@@ -9,13 +9,15 @@
     "url": "https://www.tagspaces.org"
   },
   "license": "MIT",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "parcel index.html --open",
     "prebuild-dev": "shx rm -rf dist/*",
     "build-dev": "parcel build ./src/index.js --no-minify --public-url ./",
     "build": "parcel build --public-url . index.html",
-    "push-ts-component": "push-dir --dir=dist --branch=ts-component --cleanup --verbose --allow-unclean"
+    "build-lib": "parcel build --public-url ./ ./src/index.js",
+    "push-ts-component": "prebuild-dev && build-lib && push-dir --dir=dist --branch=ts-component --cleanup --verbose --allow-unclean",
+    "push-ts-pages": "prebuild-dev && build && push-dir --dir=dist --branch=ts-pages --cleanup --verbose --allow-unclean"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.4",
