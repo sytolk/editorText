@@ -3,12 +3,26 @@
   "version": "1.0.0",
   "description": "A TagSpaces extension allowing editing of text based documents.",
   "homepage": "https://www.tagspaces.org",
-  "main": "main.js",
   "author": {
     "name": "TagSpaces UG",
     "email": "info@tagspaces.org",
     "url": "https://www.tagspaces.org"
   },
   "license": "MIT",
-  "dependencies": {}
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "codemirror": "^5.56.0",
+    "hybrids": "4.3.0",
+    "react": "^16.13.1",
+    "react-codemirror2": "^7.§2.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }

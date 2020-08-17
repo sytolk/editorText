@@ -25,3 +25,4 @@ libs/**/examples/
 libs/**/demos/
 .idea/
 *.iml
+dist/
