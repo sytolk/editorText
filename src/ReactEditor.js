@@ -25,7 +25,7 @@ export default {
     count: 0,
     render: reactify(({count}) =>
         <div>
-            <link rel="stylesheet" href="./index.css" />
+            <link rel="stylesheet" href="../node_modules/@tagspaces/text-editor-component/index.css" />
             <CodemirrorEditor count={count}/>
         </div>
     )
