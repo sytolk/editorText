@@ -17,7 +17,7 @@ function reactify(fn) {
             const Component = fn(host);
             return (host, target) => ReactDOM.render(Component, target);
         },
-        {shadowRoot: true}
+        {shadowRoot: false}
     );
 }
 
