@@ -1,4 +1,4 @@
-import { render } from "hybrids";
+import {render} from "hybrids";
 
 import React from "react";
 import ReactDOM from "react-dom";
@@ -17,12 +17,17 @@ function reactify(fn) {
             const Component = fn(host);
             return (host, target) => ReactDOM.render(Component, target);
         },
-        { shadowRoot: false }
+        {shadowRoot: false}
     );
 }
 
 export default {
     count: 0,
-    render: reactify(({ count }) => <CodemirrorEditor count={count} />)
+    render: reactify(({count}) =>
+        <div>
+            <link rel="stylesheet" href="index.css" />
+            <CodemirrorEditor count={count}/>
+        </div>
+    )
     // render: reactify(({ count }) => <Counter count={count} />)
 };
