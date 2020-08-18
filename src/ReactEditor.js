@@ -17,7 +17,7 @@ function reactify(fn) {
             const Component = fn(host);
             return (host, target) => ReactDOM.render(Component, target);
         },
-        {shadowRoot: false}
+        {shadowRoot: true}
     );
 }
 
@@ -25,7 +25,7 @@ export default {
     count: 0,
     render: reactify(({count}) =>
         <div>
-            <link rel="stylesheet" href="@tagspaces/text-editor-component/index.css" />
+            <link rel="stylesheet" href="./index.css" />
             <CodemirrorEditor count={count}/>
         </div>
     )
