@@ -11,13 +11,13 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "yarn prebuild-dev && parcel index.html --open",
     "prebuild-dev": "shx rm -rf dist/*",
-    "build-dev": "parcel build ./src/index.js --no-minify --public-url ./",
-    "build": "parcel build --public-url . index.html",
-    "build-lib": "parcel build --public-url ./ ./src/index.js",
-    "push-ts-component": "yarn prebuild-dev && yarn build-lib && push-dir --dir=dist --branch=ts-component --cleanup --verbose --allow-unclean",
-    "push-ts-pages": "yarn prebuild-dev && yarn build && push-dir --dir=dist --branch=ts-pages --cleanup --verbose --allow-unclean"
+    "build-dev": "yarn prebuild-dev && parcel build ./src/index.js --no-minify --public-url ./",
+    "build": "yarn prebuild-dev && parcel build --public-url . index.html",
+    "build-lib": "yarn prebuild-dev && parcel build --public-url ./ ./index.js",
+    "push-ts-component": "yarn build-lib && push-dir --dir=dist --branch=ts-component --cleanup --verbose --allow-unclean",
+    "push-ts-pages": "yarn build && push-dir --dir=dist --branch=ts-pages --cleanup --verbose --allow-unclean"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.4",
