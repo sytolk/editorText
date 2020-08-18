@@ -14,10 +14,11 @@ import CodemirrorEditor from './CodemirrorEditor.js';
 function reactify(fn) {
     return render(
         (host) => {
+            host.attachShadow({ mode: "closed" })
             const Component = fn(host);
             return (host, target) => ReactDOM.render(Component, target);
         },
-        {shadowRoot: false}
+        {shadowRoot: true}
     );
 }
 
